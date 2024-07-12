@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Thông báo Khoa CNTT HAU Website Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội, Công nghệ thông tin, Công nghệ đa phương tiện">
+    <meta name="description" content="Thông báo Khoa CNTT HAU Website Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội">
+    <meta name="Author" content="Nhóm 3">
+    <meta name="copyright" content="Nhóm 3">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <link rel="shortcut icon" href="../../img/logo.ico" type="image/x-icon">
+    <title>Hội thảo “Chuyển đổi số trong giáo dục và đào tạo” năm 2024 - Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội</title>
+    <link rel="stylesheet" type="text/css" href="../../css/thongbao/stylecnttdonghanhcds.css">  
+    <link rel="stylesheet" type="text/css" href="../../css/tintuc/style scroll_to_top.css">
+    <script src="../../js/thongbao/mainveviecthisinhviengioi.js"></script> 
+    <script src="../../js/tintuc/maincmt.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header class="header" id="main-header">
+        <div id="search-bar-container" class="search-bar-container">
+            <input type="text" id="search-bar" class="search-bar" placeholder="Nhập từ khóa tìm kiếm...">
+            <button onclick="search()" class="search-button">Tìm kiếm</button>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="../../img/logo.png" alt="Logo" class="ảnh">
+                <div class="title">
+                    <span class="line1">KHOA CÔNG NGHỆ THÔNG TIN</span><br>
+                    <span class="line2">ĐẠI HỌC KIẾN TRÚC HÀ NỘI</span>
+                </div>
+            </div>          
+            
+            <nav class="navbar">
+                <div class="hotline">
+                    <a href="#" id="hotline-link" onclick="showHotline()"><img src="../../img/Hotline.png" alt="Hotline" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="hotline-number" style="display: none;" onclick="showHotline()">024.3854.2391</span>
+                </div>
+                <div class="email">
+                    <a href="#" id="email-link" onclick="showEmail()"><img src="../../img/Email.png" alt="Email" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="email-text" style="display: none;" onclick="showEmail()">khoacntt@hau.edu.vn</span>
+                </div>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/cntt.dhkt" target="_blank"><img src="../../img/Facebook.png" alt="Facebook" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="youtube">
+                    <a href="https://www.youtube.com/channel/UC1LQLaQng8hdIqcUhWKFbnw" target="_blank"><img src="../../img/YouTube.png" alt="YouTube" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="search">
+                    <a href="#" id="search-link" onclick="showSearchBar()"><img src="../../img/Search.png" alt="Search" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+            </nav>
+        </div>
+
+
+        <nav class="tieude">
+            <a href="../../index.html" >TRANG CHỦ</a>
+             
+            <div class="dropdown">
+                <a href="../../gioithieu/gioithieu.html">GIỚI THIỆU</a>
+                <div class="dropdown-content">
+                    <a href="../../gioithieu/gioithieukhoacntthau.html">GIỚI THIỆU KHOA CNTT HAU</a>
+                    <a href="../../gioithieu/tamnhin_nhiemvu.html">TẦM NHÌN - NHIỆM VỤ</a>
+                    <a href="../../gioithieu/doingugiangvien.html">ĐỘI NGŨ GIẢNG VIÊN</a>
+                    <a href="../../gioithieu/albumanh.html">THƯ VIỆN ẢNH</a>
+                    <a href="../../gioithieu/thuvienclip.html">THƯ VIỆN CLIP</a>
+                    <a href="../../gioithieu/doanthanhnien.html">ĐOÀN THANH NIÊN</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="../../tintuc/tintuc.html" id="selected">TIN TỨC</a>
+                <div class="dropdown-content">
+                    <a href="../../tintuc/thongbao.html">THÔNG BÁO</a>
+                    <a href="../../tintuc/cntt.html">CÔNG NGHỆ THÔNG TIN</a>
+                    <a href="../../tintuc/congnghedaphuongtien.html">CÔNG NGHỆ ĐA PHƯƠNG TIỆN</a>
+                    <a href="../../tintuc/tinhocungdung.html">TIN HỌC ỨNG DỤNG</a>
+                    <a href="../../tintuc/khoahoccongnghe.html">KHOA HỌC CÔNG NGHỆ</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="../../daotao/daotao.html">ĐÀO TẠO</a>
+                <div class="dropdown-content">
+                    <a href="../../daotao/nam2022.html">NĂM 2022</a>
+                    <a href="../../daotao/nam2021.html">NĂM 2021</a>
+                    <a href="../../daotao/nam2020.html">NĂM 2020</a>
+                    <a href="../../daotao/nam2016.html">NĂM 2016</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="../../sinhvien/sinhvien.html">SINH VIÊN</a>
+                <div class="dropdown-content">
+                    <div class="sub-dropdown">
+                        <a href="../../sinhvien/sinhvien.html">SINH VIÊN CHUẨN BỊ TỐT NGHIỆP</a>
+                        <div class="sub-dropdown-content">
+                            <a href="../../sinhvien/thongbao.html">THÔNG BÁO</a>
+                            <a href="../../sinhvien/vanbanhuongdan.html">VĂN BẢN HƯỚNG DẪN</a>
+                            <a href="../../sinhvien/tailieuthamkhao.html">TÀI LIỆU THAM KHẢO</a>
+                            <a href="../../sinhvien/tuyendung.html">TUYỂN DỤNG</a>
+                        </div>
+                    </div>
+                    <a href="../../sinhvien/cuusinhvien.html">CỰU SINH VIÊN</a>
+                </div>
+            </div>
+            
+    
+            <div class="dropdown">
+                <a href ="../../nckh/nghiencuukhoahoc.html">NGHIÊN CỨU KHOA HỌC</a>
+                <div class="dropdown-content">
+                    <a href="../../nckh/hoatdongnckhsinhvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC SINH VIÊN</a>
+                    <a href="../../nckh/hoatdongnckhgiangvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC GIẢNG VIÊN</a>
+                </div>
+            </div>
+    
+            <a href="../../tuyensinh/tuyensinh.html">TUYỂN SINH</a> 
+            <div class="dropdown">
+                <a href="../../thuvienso/thuvienso.html">THƯ VIỆN SỐ</a>
+                <div class="dropdown-content">
+                    <a href="../../thuvienso/thuvienso.html">GIỚI THIỆU</a>
+                    <a href="../../thuvienso/congnghe.html">ĐỀ CƯƠNG CNTT</a>
+                    <a href="../../thuvienso/cndaphuongtien.html">ĐỀ CƯƠNG CNĐPT</a>
+                    <a href="../../thuvienso/giaotrinh.html">GIÁO TRÌNH</a>
+                    <a href="http://www.thuviendhkt.net/" target="_blank">THƯ VIỆN SỐ HAU</a>
+                </div>
+            </div>
+    
+        </nav>
+        </header>
+    
+        <header class="header sticky-header" id="sticky-header">
+            <div id="search-bar-container" class="search-bar-container">
+                <input type="text" id="search-bar" class="search-bar" placeholder="Nhập từ khóa tìm kiếm...">
+                <button onclick="search()" class="search-button">Tìm kiếm</button>
+            </div>
+            <div class="container">
+                <div class="logo">
+                    <img src="../../img/logo.png" alt="Logo" class="ảnh">
+                    <div class="title">
+                        <span class="line1">KHOA CÔNG NGHỆ THÔNG TIN</span><br>
+                        <span class="line2">ĐẠI HỌC KIẾN TRÚC HÀ NỘI</span>
+                    </div>
+                </div>          
+                
+                <nav class="navbar">
+                    <div class="hotline">
+                        <a href="#" id="hotline-link" onclick="showHotline()"><img src="../../img/Hotline.png" alt="Hotline" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                        <span id="hotline-number" style="display: none;" onclick="showHotline()">024.3854.2391</span>
+                    </div>
+                    <div class="email">
+                        <a href="#" id="email-link" onclick="showEmail()"><img src="../../img/Email.png" alt="Email" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                        <span id="email-text" style="display: none;" onclick="showEmail()">khoacntt@hau.edu.vn</span>
+                    </div>
+                    <div class="facebook">
+                        <a href="https://www.facebook.com/cntt.dhkt" target="_blank"><img src="../../img/Facebook.png" alt="Facebook" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    </div>
+                    <div class="youtube">
+                        <a href="https://www.youtube.com/channel/UC1LQLaQng8hdIqcUhWKFbnw" target="_blank"><img src="../../img/YouTube.png" alt="YouTube" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    </div>
+                    <div class="search">
+                        <a href="#" id="search-link" onclick="showSearchBar()"><img src="../../img/Search.png" alt="Search" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    </div>
+                </nav>
+            </div>
+    
+    
+        <nav class="tieude">
+            <a href="../../index.html" >TRANG CHỦ</a>
+             
+            <div class="dropdown">
+                <a href="../../gioithieu/gioithieu.html">GIỚI THIỆU</a>
+                <div class="dropdown-content">
+                    <a href="../../gioithieu/gioithieukhoacntthau.html">GIỚI THIỆU KHOA CNTT HAU</a>
+                    <a href="../../gioithieu/tamnhin_nhiemvu.html">TẦM NHÌN - NHIỆM VỤ</a>
+                    <a href="../../gioithieu/doingugiangvien.html">ĐỘI NGŨ GIẢNG VIÊN</a>
+                    <a href="../../gioithieu/albumanh.html">THƯ VIỆN ẢNH</a>
+                    <a href="../../gioithieu/thuvienclip.html">THƯ VIỆN CLIP</a>
+                    <a href="../../gioithieu/doanthanhnien.html">ĐOÀN THANH NIÊN</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="../../tintuc/tintuc.html" id="selected">TIN TỨC</a>
+                <div class="dropdown-content">
+                    <a href="../../tintuc/thongbao.html">THÔNG BÁO</a>
+                    <a href="../../tintuc/cntt.html">CÔNG NGHỆ THÔNG TIN</a>
+                    <a href="../../tintuc/congnghedaphuongtien.html">CÔNG NGHỆ ĐA PHƯƠNG TIỆN</a>
+                    <a href="../../tintuc/tinhocungdung.html">TIN HỌC ỨNG DỤNG</a>
+                    <a href="../../tintuc/khoahoccongnghe.html">KHOA HỌC CÔNG NGHỆ</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="../../daotao/daotao.html">ĐÀO TẠO</a>
+                <div class="dropdown-content">
+                    <a href="../../daotao/nam2022.html">NĂM 2022</a>
+                    <a href="../../daotao/nam2021.html">NĂM 2021</a>
+                    <a href="../../daotao/nam2020.html">NĂM 2020</a>
+                    <a href="../../daotao/nam2016.html">NĂM 2016</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a href="../../sinhvien/sinhvien.html">SINH VIÊN</a>
+                <div class="dropdown-content">
+                    <div class="sub-dropdown">
+                        <a href="../../sinhvien/sinhvienchuanbitotnghiep.html">SINH VIÊN CHUẨN BỊ TỐT NGHIỆP</a>
+                        <a href="../../sinhvien/sinhvien.html">SINH VIÊN CHUẨN BỊ TỐT NGHIỆP</a>
+                        <div class="sub-dropdown-content">
+                            <a href="../../sinhvien/thongbao.html">THÔNG BÁO</a>
+                            <a href="../../sinhvien/vanbanhuongdan.html">VĂN BẢN HƯỚNG DẪN</a>
+                            <a href="../../sinhvien/tailieuthamkhao.html">TÀI LIỆU THAM KHẢO</a>
+                            <a href="../../sinhvien/tuyendung.html">TUYỂN DỤNG</a>
+                        </div>
+                    </div>
+                    <a href="../../sinhvien/cuusinhvien.html">CỰU SINH VIÊN</a>
+                </div>
+            </div>
+            
+    
+            <div class="dropdown">
+                <a href ="../../nckh/nghiencuukhoahoc.html">NGHIÊN CỨU KHOA HỌC</a>
+                <div class="dropdown-content">
+                    <a href="../../nckh/hoatdongnckhsinhvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC SINH VIÊN</a>
+                    <a href="../../nckh/hoatdongnckhgiangvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC GIẢNG VIÊN</a>
+                </div>
+            </div>
+    
+            <a href="../../tuyensinh/tuyensinh.html">TUYỂN SINH</a> 
+            <div class="dropdown">
+                <a href="../../thuvienso/thuvienso.html">THƯ VIỆN SỐ</a>
+                <div class="dropdown-content">
+                    <a href="../../thuvienso/thuvienso.html">GIỚI THIỆU</a>
+                    <a href="../../thuvienso/congnghe.html">ĐỀ CƯƠNG CNTT</a>
+                    <a href="../../thuvienso/cndaphuongtien.html">ĐỀ CƯƠNG CNĐPT</a>
+                    <a href="../../thuvienso/giaotrinh.html">GIÁO TRÌNH</a>
+                    <a href="http://www.thuviendhkt.net/" target="_blank">THƯ VIỆN SỐ HAU</a>
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+
+    <div class="display">
+        <div class="display-container">
+            <p><a href="../../index.html"><img src="../../img/nuttrangchu.png" class="iconchatbox"></a> > <a href="../../tintuc/tintuc.html">TIN TỨC</a> >
+                <a href="../../tintuc/thongbao.html">THÔNG BÁO</a> > <a href="../../tintuc/thongbao/ve_chuyen_doi_so_2024.html">Hội thảo “Chuyển đổi số trong giáo dục và đào tạo” năm 2024</a>               
+            </p>
+        </div>
+    </div>
+
+    <hr class = "dongke">
+
+    <div class="container1">
+        <div class="right-container">
+            <div class="sidebar">
+                <div class="sidebar-item">
+                    <ul>
+                        <li><a href="../../tintuc/thongbao.html" class="selected">Thông báo</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-item">
+                    <ul>
+                        <li><a href="../../tintuc/cntt.html">Công nghệ thông tin</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-item">
+                    <ul>
+                        <li><a href="../../tintuc/congnghedaphuongtien.html">Công nghệ đa phương tiện</a></li>  
+                    </ul>
+                </div>
+                <div class="sidebar-item">
+                    <ul>
+                        <li><a href="../../tintuc/tinhocungdung.html">Tin học ứng dụng</a></li>  
+                    </ul>
+                </div>
+                <div class="sidebar-item">
+                    <ul>
+                        <li><a href="../../tintuc/khoahoccongnghe.html">Khoa học công nghệ</a></li>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>Hội thảo “Chuyển đổi số trong giáo dục và đào tạo” năm 2024</h2>
+            <div class="article-meta">
+                <i class="fa fa-clock"></i> <span class="date">13/06/2024</span>
+                <i class="fa fa-eye"></i> <span class="views">686</span>
+            </div>
+            <hr>
+            <p>Ngày 12/6, tại Hà Nội, trường Đại học Kiến trúc Hà Nội- Khoa Công nghệ thông tin phối hợp với Công ty MegazoneCloud và Công ty Amazone Web Services tổ chức Hội thảo Chuyển đổi số trong giáo dục và đào tạo phục vụ ngành Công nghệ thông tin, Kinh tế, Quy hoạch, Xây dựng.</p>
+            <img src="../../img/chuyendoiso (1).jpg" class="anhminhhoa">
+            <figcaption>Khách mời và cán bộ nhà trường tham dự buổi hội thảo</figcaption>
+            <p>Ngày nay, chuyển đổi số đã trở thành một yếu tố quan trọng và tất yếu trong sự phát triển của giáo dục đại học. Việc áp dụng công nghệ và dữ liệu vào quá trình giáo dục không chỉ nâng cao chất lượng giảng dạy và học tập, mà còn mở ra những cơ hội mới, giúp chúng ta bắt kịp xu hướng phát triển toàn cầu.</p>
+            <p><b>Hội thảo “Chuyển đổi số trong giáo dục và đào tạo”</b> là dịp để các cơ quan nhà nước, các nhà nghiên cứu, giảng viên và sinh viên tiếp cận, hội nhập và phát triển các công nghệ tiên tiến. Qua đó khám phá các ý tưởng mới, ứng dụng công nghệ vào giảng dạy và học tập, góp phần xây dựng một môi trường giáo dục linh hoạt, hiện đại và hiệu quả hơn.</p>
+            <p>Phát biểu tại Hội thảo, <b>PGS.TS.KTS. Phạm Trọng Thuật - Chủ tịch Hội đồng trường Đại học Kiến trúc Hà Nội</b> cho biết: <em>Trong quá trình chuyển đổi số, dữ liệu là nền tảng để thúc đẩy quá trình này một cách hiệu quả hơn. Mỗi ngày, thế giới tạo ra khoảng 2,5 triệu Terabyte dữ liệu. Dữ liệu này, nếu được khai thác và xử lý hiệu quả, sẽ mang lại những giá trị vô cùng lớn, giúp cải thiện và tối ưu hóa mọi khía cạnh của giáo dục. Chính vì vậy, việc sử dụng các công nghệ tiên tiến như trí tuệ nhân tạo, khoa học dữ liệu và đặc biệt là điện toán đám mây, đã trở nên vô cùng cần thiết.</em></p>
+            <p><b>Bên cạnh đó có các bài tham luận rất giá trị:</b></p>
+            <p><em>1. Tăng tốc chuyển đổi số tỏng Giáo dục bậc cao với AWS (Ông Trần Đức Trường - Giám đốc đối tác Khối dịch vụ Công AWS)</em></p>
+            <p><em>2. Case Stydy về chuyển đổi số trong ngành Giáo dục (Ông Phạm Ngọc Minh - trưởng nhóm AWS Cloud và ông Nguyễn Quang Hà - kỹ sư kiến trúc AWS Cloud.)</em></p>
+            <p><em>3. Ứng dụng điện toán đám mây xử lý dữ liệu lớn viễn thám (Bà Nguyễn Thị Phương Hảo- Trung tâm Vũ Trụ Việt Nam)</em></p>
+            <p><em>4. Ứng dụng trí tuệ nhân tạo và xử lý dữ liệu lớn trong Giáo dục (Tiến sĩ Bùi Hải Phong - Phó trưởng Khoa Công nghệ thông tin- ĐH Kiến Trúc Hà Nội. )</em></p>
+            <p><em>5. Cá nhân hoá đào tạo nhân lực với phân tích dữ liệu (Ông Hà Vũ Phượng - Giám đốc Insight Data)</em></p>
+            <p><em>6. Ứng dụng AI tạo sinh trong Đào tạo và Giáo dục. (Ông Vương Văn Linh- Founder Công ty Cổ phần Công nghệ và Dịch vụ Katech, Việt Nam.)</em></p>
+            <img src="../../img/chuyendoiso (2).jpg" class="anhminhhoa">
+            <figcaption>Phát biểu tại buổi hội thảo</figcaption>
+            <p>Cùng với sự góp mặt của rất nhiều nhà khoa học và giảng viên. Chuyển đổi số là động lực chính để cải thiện sự hấp dẫn, sự tham gia của sinh viên, cho phép các tổ chức giáo dục quyết định hoạt động trên dữ liệu, cùng với đó là đa dạng hóa thiết kế học tập và cung cấp chương trình giảng dạy, tăng tốc nghiên cứu và hợp tác, đồng thời, tạo trải nghiệm cá nhân hóa và hấp dẫn cho cả sinh viên và nhân viên.</p>
+
+            
+            
+            <div class="comment-sectionkh">
+                <div class="comment-headerkh">
+                    <span id="comment-countkh">0 bình luận</span>
+                    <button id="sort-commentskh">Sắp xếp</button>
+                </div>
+                <div id="comments-containerkh"></div>
+                <div class="comment-inputkh">
+                    <img id="user-avatar" src="../../img/avt.jpg" alt="Avatar" class="avatar">
+                    <input type="text" id="comment-textkh" placeholder="Viết bình luận...">
+                    <button id="post-commentkh">Gửi</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <button id="scroll-to-top" title="Go to top">↑</button>
+
+    <footer>
+        <div class="chantrangweb">
+            <div class="footer-column">
+                <h3>LIÊN KẾT</h3>
+                <div class="textwidget">
+                    <ul>
+                        <li><a href="https://hau.edu.vn/" target="_blank" class="special-link">Đại học Kiến trúc</a></li>
+                        <li><a href="https://moet.gov.vn/Pages/home.aspx" target="_blank" class="special-link">Bộ Giáo dục và Đào tạo</a></li>
+                        <li><a href="https://moc.gov.vn/vn/Pages/Trangchu.aspx" target="_blank" class="special-link">Bộ xây dựng</a></li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>LIÊN HỆ</h3>
+                <div class="textwidget">
+                    <ul>
+                        <li>Địa chỉ: Tầng 7 Nhà I, Đại học Kiến trúc, P. Văn Quán, Hà Đông, Hà Nội</li>
+                        <li>Điện thoại: 024.3854.2391</li>
+                        <li>Email: khoacntt@hau.edu.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>BẢN ĐỒ</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14901.20506835429!2d105.7891549!3d20.9805574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ade83ba9e115%3A0x6f4fdb5e1e9e39ed!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBLaeG6v24gdHLDumMgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1719037006419!5m2!1svi!2s" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

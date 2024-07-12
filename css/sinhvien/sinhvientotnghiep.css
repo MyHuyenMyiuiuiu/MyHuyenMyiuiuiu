@@ -1,0 +1,618 @@
+.article .xemchitiet p{
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.bold-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 16px; 
+    color:#000;
+}
+
+.article h3 {
+    font-size: 18px;
+    color:#000;
+}
+
+.article h2 {
+    margin-top: 0;
+    text-transform: uppercase; /*in hoa*/
+    color: #004080;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.article p {
+    font-size: 16px;
+    line-height: 1.5; 
+    text-align:justify;
+}
+.article ul {
+    line-height: 1.5; 
+    text-align:justify;
+}
+
+.anhtuyendung {
+    width: 100%; /* Độ rộng mong muốn */
+    height: auto; /* Chiều cao tự điều chỉnh theo tỷ lệ */
+    display: block; /* Để ảnh hiển thị dạng block */
+    margin-left: auto; /* Căn lề trái tự động */
+    margin-right: auto; /* Căn lề phải tự động */
+
+}
+
+/*Mục comment*/
+.comment-section1 {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.comment-header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#comments-container1 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.comment-input1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment1 {
+    display: flex;
+    align-items: center;
+    background-color: #e6f7ff; /* Nền màu xanh nhạt */
+    border: 1px solid #b3d7ff;
+    border-radius: 6px; /* Bo góc 6px */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-date1 {
+    margin-bottom: 10px;
+    align-self: flex-start; /* Canh ngày ở đầu */
+}
+
+.comment1 p {
+    margin: 0;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-details1 p {
+    text-align: justify;
+}
+
+#comment-text {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+#post-comment {
+    padding: 10px 20px;
+    color: white;
+    background-color: #025ba1;
+    border-color: #025ba1;
+    cursor: pointer;
+    border-style: none;
+}
+
+#sort-comments1 {
+    color: white;
+    background-color: #025ba1;
+    border-color: #025ba1;
+    cursor: pointer;
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.taiday {
+    font-weight: bold;
+    color:#025ba1;
+}
+
+/*bài đăng cựu sinh viên*/
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #025ba1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.time {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.time.left {
+    left: 0;
+}
+
+.time.right {
+    left: 50%;
+}
+
+.time::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12.5px;
+    background-color: white;
+    border: 4px solid #025ba1;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.noidungbaidang h2 {
+    text-transform: none;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.time.right::after {
+    left: -12.5px;
+}
+
+.noidungbaidang {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.noidungbaidang img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px 6px 0 0;
+}
+
+.ngaydangbai {
+    position: absolute;
+    top: 15px;
+    right: -170px;
+    background: #025ba1;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    border-radius: 20px;
+}
+
+.time.right .ngaydangbai {
+    left: -170px;
+    right: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .time {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .time::after {
+        left: 15px;
+    }
+
+    .time.right {
+        left: 0;
+    }
+
+    .time.right .ngaydangbai {
+        left: 70px;
+        right: auto;
+    }
+
+    .ngaydangbai {
+        left: 70px;
+        right: auto;
+    }
+}
+.noidungbaidang Xem {
+    text-transform: none;
+    font-size: 18px;
+    margin:0;
+}
+.noidungbaidang p {
+    font-size: 14px;
+    text-align:right;
+}
+
+#iconbinhluan {
+    width: 15px;
+    height: auto;
+}
+
+.chiase {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.tennguoiviet {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.tennguoiviet h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 16px;
+}
+
+.article-meta {
+    display: flex;
+    color: #636363;
+    font-size: 0.9em;
+    margin-top: 10px; /* Thêm khoảng cách giữa h3 và meta info */
+    margin-left: 50px;
+}
+
+.article-meta .date {
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.article-meta .views {
+    margin-left: 5px;
+}
+
+/*mục comment bài đăng 2 */
+.comment-section2 {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.comment-header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#comments-container2 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.comment-input2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment2 {
+    display: flex;
+    align-items: center;
+    background-color: #e6f7ff;
+    border: 1px solid #b3d7ff;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-date2 {
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.comment2 p {
+    margin: 0;
+}
+
+.comment-details2 p {
+    text-align: justify;
+}
+
+#comment-text2 {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+#post-comment2 {
+    padding: 10px 20px;
+    color: white;
+    background-color: #025ba1;
+    border-color: #025ba1;
+    cursor: pointer;
+    border-style: none;
+}
+
+#sort-comments2 {
+    color: white;
+    background-color: #025ba1;
+    border-color: #025ba1;
+    cursor: pointer;
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.article-meta1 {
+    display: flex;
+    color: #636363;
+    font-size: 0.9em;
+    margin-top: 10px; /* Thêm khoảng cách giữa h3 và meta info */
+}
+
+.article-meta1 .date {
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.article-meta1 .views {
+    margin-left: 5px;
+}
+
+/*Mục comment*/
+
+.comment-section {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#comments-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.comment-input {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    background-color: #e6f7ff; /* Nền màu xanh nhạt */
+    border: 1px solid #b3d7ff;
+    border-radius: 6px; /* Bo góc 6px */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-date {
+    margin-bottom: 10px;
+    align-self: flex-start; /* Canh ngày ở đầu */
+}
+
+.comment p {
+    margin: 0;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-details p {
+    text-align: justify;
+}
+
+#comment-text {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+#post-comment {
+    padding: 10px 20px;
+    color: white;
+    background-color: #025ba1;
+    border-color: #025ba1;
+    cursor: pointer;
+    border-style: none;
+}
+
+#sort-comments {
+    color: white;
+    background-color: #025ba1;
+    border-color: #025ba1;
+    cursor: pointer;
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*baì chia sẻ comment 3*/
+.comment-section3 {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.comment-header3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#comments-container3 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.comment-input3 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment3 {
+    display: flex;
+    align-items: center;
+    background-color: #e6f7ff; /* Nền màu xanh nhạt */
+    border: 1px solid #b3d7ff;
+    border-radius: 6px; /* Bo góc 6px */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-date3 {
+    margin-bottom: 10px;
+    align-self: flex-start; /* Canh ngày ở đầu */
+}
+
+.comment3 p {
+    margin: 0;
+}
+
+.comment-details3 p {
+    text-align: justify;
+}
+
+#comment-text3 {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+#post-comment3 {
+    padding: 10px 20px;
+    color: white;
+    background-color: #025ba1;
+    border-color: #025ba1;
+    cursor: pointer;
+    border-style: none;
+}
+
+#sort-comments3 {
+    color: white;
+    background-color: #025ba1;
+    border-color: #025ba1;
+    cursor: pointer;
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*ảnh cv*/
+.cvmau {
+    flex: 1; /* Chứng nhận chiếm 1/3 */
+    margin-left: 10px;
+}
+
+.anhcv {
+    width: 100%; /* Đảm bảo hình ảnh chứng nhận chiếm đủ 1/3 phần bên phải */
+    height: auto;
+    cursor: pointer; /* Thêm con trỏ khi hover vào ảnh */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Thêm hiệu ứng chuyển tiếp */
+}
+
+.anhcv:hover {
+    transform: scale(1.05); /* Phóng to ảnh khi hover */
+    opacity: 0.8; /* Thay đổi độ mờ khi hover */
+}
+.cvtrantrungkien {
+    display: flex;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+/* Modal (background) */
+.modal {
+    display: none; /* Ẩn modal mặc định */
+    position: fixed;
+    z-index: 1001; /* Đảm bảo modal luôn trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.452); /* Black w/ opacity */
+    background-color: #6062668a(112, 112, 112, 0.541); /* Black w/ opacity */
+}
+
+/* Modal content (image) */
+.modal-content {
+    margin: 50px auto 50px auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+

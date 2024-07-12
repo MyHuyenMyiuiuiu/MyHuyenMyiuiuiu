@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Nghiên cứu khoa học sinh viên Khoa CNTT HAU Website Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội, Công nghệ thông tin, Công nghệ đa phương tiện">
+    <meta name="description" content="Nghiên cứu khoa học sinh viên Khoa CNTT HAU Website Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội">
+    <meta name="Author" content="Nhóm 3">
+    <meta name="copyright" content="Nhóm 3">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+    <title>Nghiên cứu khoa học sinh viên - Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội</title>
+    <link rel="stylesheet" type="text/css" href="../css/nckh/nckhstyle.css">  
+    <link rel="stylesheet" type="text/css" href="../css/nckh/nckhchitiet.css">     
+    <script src="../js/gioithieu/gioithieu.js"></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="header" id="main-header">
+        <div id="search-bar-container" class="search-bar-container">
+            <input type="text" id="search-bar" class="search-bar" placeholder="Nhập từ khóa tìm kiếm...">
+            <button onclick="search()" class="search-button">Tìm kiếm</button>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo" class="ảnh">
+                <div class="title">
+                    <span class="line1">KHOA CÔNG NGHỆ THÔNG TIN</span><br>
+                    <span class="line2">ĐẠI HỌC KIẾN TRÚC HÀ NỘI</span>
+                </div>
+            </div>          
+            
+            <nav class="navbar">
+                <div class="hotline">
+                    <a href="#" id="hotline-link" onclick="showHotline()"><img src="../img/Hotline.png" alt="Hotline" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="hotline-number" style="display: none;" onclick="showHotline()">024.3854.2391</span>
+                </div>
+                <div class="email">
+                    <a href="#" id="email-link" onclick="showEmail()"><img src="../img/Email.png" alt="Email" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="email-text" style="display: none;" onclick="showEmail()">khoacntt@hau.edu.vn</span>
+                </div>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/cntt.dhkt" target="_blank"><img src="../img/Facebook.png" alt="Facebook" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="youtube">
+                    <a href="https://www.youtube.com/channel/UC1LQLaQng8hdIqcUhWKFbnw" target="_blank"><img src="../img/YouTube.png" alt="YouTube" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="search">
+                    <a href="#" id="search-link" onclick="showSearchBar()"><img src="../img/Search.png" alt="Search" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+            </nav>
+        </div>
+
+
+    <nav class="tieude">
+        <a href="../index.html" >TRANG CHỦ</a>
+         
+        <div class="dropdown">
+            <a href="../gioithieu/gioithieu.html">GIỚI THIỆU</a>
+            <div class="dropdown-content">
+                <a href="../gioithieu/gioithieukhoacntthau.html">GIỚI THIỆU KHOA CNTT HAU</a>
+                <a href="../gioithieu/tamnhin_nhiemvu.html">TẦM NHÌN - NHIỆM VỤ</a>
+                <a href="../gioithieu/doingugiangvien.html">ĐỘI NGŨ GIẢNG VIÊN</a>
+                <a href="../gioithieu/albumanh.html">THƯ VIỆN ẢNH</a>
+                <a href="../gioithieu/thuvienclip.html">THƯ VIỆN CLIP</a>
+                <a href="../gioithieu/doanthanhnien.html">ĐOÀN THANH NIÊN</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="../tintuc/tintuc.html">TIN TỨC</a>
+            <div class="dropdown-content">
+                <a href="../tintuc/thongbao.html">THÔNG BÁO</a>
+                <a href="../tintuc/cntt.html">CÔNG NGHỆ THÔNG TIN</a>
+                <a href="../tintuc/congnghedaphuongtien.html">CÔNG NGHỆ ĐA PHƯƠNG TIỆN</a>
+                <a href="../tintuc/tinhocungdung.html">TIN HỌC ỨNG DỤNG</a>
+                <a href="../tintuc/khoahoccongnghe.html">KHOA HỌC CÔNG NGHỆ</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="../daotao/daotao.html">ĐÀO TẠO</a>
+            <div class="dropdown-content">
+                <a href="../daotao/nam2022.html">NĂM 2022</a>
+                <a href="../daotao/nam2021.html">NĂM 2021</a>
+                <a href="../daotao/nam2020.html">NĂM 2020</a>
+                <a href="../daotao/nam2016.html">NĂM 2016</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="../sinhvien/sinhvien.html">SINH VIÊN</a>
+            <div class="dropdown-content">
+                <div class="sub-dropdown">
+                    <a href="../sinhvien/sinhvien.html">SINH VIÊN CHUẨN BỊ TỐT NGHIỆP</a>
+                    <div class="sub-dropdown-content">
+                        <a href="../sinhvien/thongbao.html">THÔNG BÁO</a>
+                        <a href="../sinhvien/vanbanhuongdan.html">VĂN BẢN HƯỚNG DẪN</a>
+                        <a href="../sinhvien/tailieuthamkhao.html">TÀI LIỆU THAM KHẢO</a>
+                        <a href="../sinhvien/tuyendung.html">TUYỂN DỤNG</a>
+                    </div>
+                </div>
+                <a href="../sinhvien/cuusinhvien.html">CỰU SINH VIÊN</a>
+            </div>
+        </div>
+        
+
+        <div class="dropdown">
+            <a href ="../nckh/nghiencuukhoahoc.html"  id="selected">NGHIÊN CỨU KHOA HỌC</a>
+            <div class="dropdown-content">
+                <a href="../nckh/hoatdongnckhsinhvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC SINH VIÊN</a>
+                <a href="../nckh/hoatdongnckhgiangvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC GIẢNG VIÊN</a>
+            </div>
+        </div>
+
+        <a href="../tuyensinh/tuyensinh.html">TUYỂN SINH</a> 
+        <div class="dropdown">
+            <a href="../thuvienso/thuvienso.html">THƯ VIỆN SỐ</a>
+            <div class="dropdown-content">
+                <a href="../thuvienso/thuvienso.html">GIỚI THIỆU</a>
+                <a href="../thuvienso/congnghe.html">ĐỀ CƯƠNG CNTT</a>
+                <a href="../thuvienso/cndaphuongtien.html">ĐỀ CƯƠNG CNĐPT</a>
+                <a href="../thuvienso/giaotrinh.html">GIÁO TRÌNH</a>
+                <a href="http://www.thuviendhkt.net/" target="_blank">THƯ VIỆN SỐ HAU</a>
+            </div>
+        </div>
+
+    </nav>
+    </header>
+
+    <header class="header sticky-header" id="sticky-header">
+        <div id="search-bar-container" class="search-bar-container">
+            <input type="text" id="search-bar" class="search-bar" placeholder="Nhập từ khóa tìm kiếm...">
+            <button onclick="search()" class="search-button">Tìm kiếm</button>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo" class="ảnh">
+                <div class="title">
+                    <span class="line1">KHOA CÔNG NGHỆ THÔNG TIN</span><br>
+                    <span class="line2">ĐẠI HỌC KIẾN TRÚC HÀ NỘI</span>
+                </div>
+            </div>          
+            
+            <nav class="navbar">
+                <div class="hotline">
+                    <a href="#" id="hotline-link" onclick="showHotline()"><img src="../img/Hotline.png" alt="Hotline" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="hotline-number" style="display: none;" onclick="showHotline()">024.3854.2391</span>
+                </div>
+                <div class="email">
+                    <a href="#" id="email-link" onclick="showEmail()"><img src="../img/Email.png" alt="Email" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="email-text" style="display: none;" onclick="showEmail()">khoacntt@hau.edu.vn</span>
+                </div>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/cntt.dhkt" target="_blank"><img src="../img/Facebook.png" alt="Facebook" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="youtube">
+                    <a href="https://www.youtube.com/channel/UC1LQLaQng8hdIqcUhWKFbnw" target="_blank"><img src="../img/YouTube.png" alt="YouTube" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="search">
+                    <a href="#" id="search-link" onclick="showSearchBar()"><img src="../img/Search.png" alt="Search" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+            </nav>
+        </div>
+
+
+    <nav class="tieude">
+        <a href="../index.html" >TRANG CHỦ</a>
+         
+        <div class="dropdown">
+            <a href="../gioithieu/gioithieu.html">GIỚI THIỆU</a>
+            <div class="dropdown-content">
+                <a href="../gioithieu/gioithieukhoacntthau.html">GIỚI THIỆU KHOA CNTT HAU</a>
+                <a href="../gioithieu/tamnhin_nhiemvu.html">TẦM NHÌN - NHIỆM VỤ</a>
+                <a href="../gioithieu/doingugiangvien.html">ĐỘI NGŨ GIẢNG VIÊN</a>
+                <a href="../gioithieu/albumanh.html">THƯ VIỆN ẢNH</a>
+                <a href="../gioithieu/thuvienclip.html">THƯ VIỆN CLIP</a>
+                <a href="../gioithieu/doanthanhnien.html">ĐOÀN THANH NIÊN</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="../tintuc/tintuc.html">TIN TỨC</a>
+            <div class="dropdown-content">
+                <a href="../tintuc/thongbao.html">THÔNG BÁO</a>
+                <a href="../tintuc/cntt.html">CÔNG NGHỆ THÔNG TIN</a>
+                <a href="../tintuc/congnghedaphuongtien.html">CÔNG NGHỆ ĐA PHƯƠNG TIỆN</a>
+                <a href="../tintuc/tinhocungdung.html">TIN HỌC ỨNG DỤNG</a>
+                <a href="../tintuc/khoahoccongnghe.html">KHOA HỌC CÔNG NGHỆ</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="../daotao/daotao.html">ĐÀO TẠO</a>
+            <div class="dropdown-content">
+                <a href="../daotao/nam2022.html">NĂM 2022</a>
+                <a href="../daotao/nam2021.html">NĂM 2021</a>
+                <a href="../daotao/nam2020.html">NĂM 2020</a>
+                <a href="../daotao/nam2016.html">NĂM 2016</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="../sinhvien/sinhvien.html">SINH VIÊN</a>
+            <div class="dropdown-content">
+                <div class="sub-dropdown">
+                    <a href="../sinhvien/sinhvien.html">SINH VIÊN CHUẨN BỊ TỐT NGHIỆP</a>
+                    <div class="sub-dropdown-content">
+                        <a href="../sinhvien/thongbao.html">THÔNG BÁO</a>
+                        <a href="../sinhvien/vanbanhuongdan.html">VĂN BẢN HƯỚNG DẪN</a>
+                        <a href="../sinhvien/tailieuthamkhao.html">TÀI LIỆU THAM KHẢO</a>
+                        <a href="../sinhvien/tuyendung.html">TUYỂN DỤNG</a>
+                    </div>
+                </div>
+                <a href="../sinhvien/cuusinhvien.html">CỰU SINH VIÊN</a>
+            </div>
+        </div>
+        
+
+        <div class="dropdown">
+            <a href ="../nckh/nghiencuukhoahoc.html"  id="selected">NGHIÊN CỨU KHOA HỌC</a>
+            <div class="dropdown-content">
+                <a href="../nckh/hoatdongnckhsinhvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC SINH VIÊN</a>
+                <a href="../nckh/hoatdongnckhgiangvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC GIẢNG VIÊN</a>
+            </div>
+        </div>
+
+        <a href="../tuyensinh/tuyensinh.html">TUYỂN SINH</a> 
+        <div class="dropdown">
+            <a href="../thuvienso/thuvienso.html">THƯ VIỆN SỐ</a>
+            <div class="dropdown-content">
+                <a href="../thuvienso/thuvienso.html">GIỚI THIỆU</a>
+                <a href="../thuvienso/congnghe.html">ĐỀ CƯƠNG CNTT</a>
+                <a href="../thuvienso/cndaphuongtien.html">ĐỀ CƯƠNG CNĐPT</a>
+                <a href="../thuvienso/giaotrinh.html">GIÁO TRÌNH</a>
+                <a href="http://www.thuviendhkt.net/" target="_blank">THƯ VIỆN SỐ HAU</a>
+            </div>
+        </div>
+
+    </nav>
+    </header>
+    <div class="display">
+        <div class="display-container">
+            <p><a href="../index.html"><img src="../img/nuttrangchu.png" class="iconchatbox"></a> > <a href="../nckh/nghiencuukhoahoc.html">NGHIÊN CỨU KHOA HỌC</a> >
+                <a href="../nckh/hoatdongnckhsinhvien.html">HOẠT ĐỘNG NCKH SINH VIÊN</a> > <a href="sinh-vien-khoa-cntt-truong-dh-kien-truc-nghien-cuu-xay-dung-“ung-dung-quan-ly-chi-tieu-ca-nhan”.html">Nghiên cứu, xây dựng “Ứng dụng quản lý chi tiêu cá nhân”</a>
+            </p>
+        </div>
+    </div>
+    <hr class = "dongke">
+    <div class="container1">
+        <div class="right-container">
+            <div class="sidebar">
+                <div class="sidebar-item">
+                    <ul>
+                        <li><a href="../nckh/hoatdongnckhsinhvien.html" class="selected">Hoạt động NCKH sinh viên</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-item">
+                    <ul>
+                        <li><a href="../nckh/hoatdongnckhgiangvien.html">Hoạt động NCKH giảng viên</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>Sinh viên Khoa CNTT - Trường ĐH Kiến Trúc nghiên cứu, xây dựng “Ứng dụng quản lý chi tiêu cá nhân”</h2>
+            <div class="article-meta">
+                <i class="fa fa-clock"></i> <span class="date">02/06/2022</span>
+                <i class="fa fa-eye"></i> <span class="views">1183</span>
+            </div>
+            <hr>
+            <p>Ứng dụng giúp người dùng ghi chép chi tiết các khoản thu, chi theo từng ngày, từng tháng, từng năm từ đó người dùng có thể dễ dàng đưa ra các quyết định chi tiêu một cách hợp lý hơn.</p>
+            <p>Ứng dụng quản lý chi tiêu do nhóm sinh viên năm ba Trường Đại học Kiến Trúc Hà Nội nghiên cứu và xây dựng nhằm hỗ trợ người dùng sử dụng hệ điều hành Android về vấn đề quản lý chi tiêu cá nhân.</p>
+            <p>Nhóm tác giả gồm 5 sinh viên năm ba: Nguyễn Văn Toàn, Nguyễn Trọng Đoàn, Nguyễn Diệp Chi, Nguyễn Tiến Trung và Phan Thị Giang thực hiện</p>
+            <p>Bạn Nguyễn Diệp Chi – sinh viên lớp 19CN2 – chia sẻ: “Theo khảo sát của nhóm, hiện nay có rất nhiều bà mẹ nội trợ, các bạn sinh viên, nhân viên văn phòng,… đang gặp khó khăn trong việc quản lý tiền bạc, sắp xếp chi tiêu, lập kế hoạch tiết kiệm,… Nhận ra những vấn đề trên, tất cả các thành viên trong nhóm đã quyết định áp dụng các kiến thức đã được học trên trường lớp để xây dựng Ứng dụng quản lý chi tiêu cá nhân để giúp người dùng phần nào đó có thể quản lý chi tiêu một cách tốt hơn!”.</p>
+            <p>Bạn Trung chia sẻ: “Ngày cuối tháng, em nhận lương làm thêm với số tiền khoảng hai triệu đồng, sau vài hôm, em khá bất ngờ khi so với khoản tiền ban đầu, số tiền còn lại chỉ còn vài trăm nghìn đồng, gặp khó khăn khi phải nhớ xem đã chi tiêu những khoản nào vào những việc gì nên em đã bỏ cuộc, khi được các bạn rủ tham gia làm ứng dụng, em ngay lập tức đồng ý với mong muốn có được một ứng dụng giúp bản thân và mọi người có thể quản lý chi tiêu tốt hơn, do chính tay mình xây dựng”.</p>
+            <p>Chia sẻ về lợi ích của việc ghi chép các khoản chi tiêu hàng này bạn Giang nói: “Việc quản lý tài chính cá nhân không phải là công việc đơn giản. Tuy nhiên, chúng ta có thể bắt đầu từ những bước nhỏ nhất đó là tập thói quen ghi chép lại các chi phí mình đã sử dụng mỗi ngày. Bên cạnh đó, việc xem xét và tính toán chi tiêu mỗi ngày sẽ giúp chúng ta dễ dàng hơn trong việc cân đối và quản lý chi tiêu sao cho phù hợp với những kế hoạch mà mình đã lập ra. Mục tiêu của việc này là để cuối ngày chúng ta có thể tổng kết lại và phân bố lại chi tiêu một cách hợp lý hơn. Bước đầu tập quản lý tài chính có thể là sẽ khá khó khăn, vì chúng ta đang trong một lối sống tự do, tiêu pha không cần suy nghĩ nhiều.”.</p>
+            <p>Bên cạnh đó, người dùng sử dụng ứng dụng sẽ có những lợi ích như: có thể hiểu rõ về nguồn tiền của mình, đảm bảo tài chính ổn định, dễ dàng lập các mục tiêu tài chính của cá nhân, chủ động tài chính trong mọi trường hợp, quản lý và hạn chế các khoản vay nợ, gia tăng tài sản và giúp nâng cao đời sống cá nhân.</p>
+            <p>Sau khi trình bày ý tưởng nghiên cứu “Ứng dụng quản lý chi tiêu”, nhóm được hai giảng viên nhận lời hướng dẫn là hai thầy: ThS Nguyễn Quốc Huy và ThS Mai Vũ, cả hai thầy đều là giảng viên Khoa Công nghệ thông tin trường Đại học Kiến Trúc Hà Nội.</p>
+            <img src="../img/nckhsv/2022-06-02.jpg">
+            <figcaption>Hình ảnh buổi nghiệm thu NCKHSV năm học 2021-2022 ngày 17-05-2022</figcaption>
+            <p>“Hiện nhóm chúng em đã hoàn thiện được một số tính năng như thêm các khoản thu chi: tên khoản thu, khoản chi, loại thu, loại chi; thống kê các khoản chi tiêu theo ngày, tháng, năm; nhắc nhở người dùng nếu chi tiêu vượt mức”, Bạn Đoàn cho biết thêm về ứng dụng mà nhóm đã hoàn thiện.</p>
+            <img src="../img/nckhsv/articlepic (4).png" class="logo">
+            <figcaption>Logo ứng dụng iMoney quản lý chi tiêu</figcaption>
+            <p>Chia sẻ về khó khăn trong quá trình thực hiện bạn Toàn cho hay: “Việc khó khăn nhất mà nhóm gặp phải là về kiến thức. Các kiến thức liên quan đến hệ điều hành Android, ngôn ngữ lập trình Java… theo chương trình học, nhóm vẫn chưa được tiếp xúc đến các kiến thức này. Để hoàn thiện, nhóm cần tìm tòi, nghiên cứu trên mạng Internet và các tài liệu liên quan khác.”            </p>
+            <img src="../img/nckhsv/baner i money(1).png" class="logo">
+            <figcaption>Banner giới thiệu ứng dụng</figcaption>
+            <p>Hiện nhóm đã đăng ký đề tài nghiên cứu khoa học sinh viên và nhóm đã đạt giải Khuyến Khích trong chương trình “Sinh viên với đề tài khởi nghiệp – StartUp” và cũng như nhóm đang hoàn thiện thêm một số tính năng mới như: theo dõi sổ tiết kiệm, vay nợ, chứng khoán, tiền điện tử,… và có thể liên kết được với tài khoản ngân hàng để giúp người dùng dễ dàng sử dụng.</p>
+            
+            <div class="comment-sectionkh">
+                <div class="comment-headerkh">
+                    <span id="comment-countkh">0 bình luận</span>
+                    <button id="sort-commentskh">Sắp xếp</button>
+                </div>
+                <div id="comments-containerkh"></div>
+                <div class="comment-inputkh">
+                    <img id="user-avatar" src="../img/avt.jpg" alt="Avatar" class="avatar">
+                    <input type="text" id="comment-textkh" placeholder="Viết bình luận...">
+                    <button id="post-commentkh">Gửi</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <button id="scroll-to-top" title="Go to top">↑</button>
+
+    <script src="../js/nckhsv.js"></script>  
+
+    <footer>
+        <div class="chantrangweb">
+            <div class="footer-column">
+                <h3>LIÊN KẾT</h3>
+                <div class="textwidget">
+                    <ul>
+                        <li><a href="https://hau.edu.vn/" target="_blank" class="special-link">Đại học Kiến trúc</a></li>
+                        <li><a href="https://moet.gov.vn/Pages/home.aspx" target="_blank" class="special-link">Bộ Giáo dục và Đào tạo</a></li>
+                        <li><a href="https://moc.gov.vn/vn/Pages/Trangchu.aspx" target="_blank" class="special-link">Bộ xây dựng</a></li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>LIÊN HỆ</h3>
+                <div class="textwidget">
+                    <ul>
+                        <li>Địa chỉ: Tầng 7 Nhà I, Đại học Kiến trúc, P. Văn Quán, Hà Đông, Hà Nội</li>
+                        <li>Điện thoại: 024.3854.2391</li>
+                        <li>Email: khoacntt@hau.edu.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>BẢN ĐỒ</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14901.20506835429!2d105.7891549!3d20.9805574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ade83ba9e115%3A0x6f4fdb5e1e9e39ed!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBLaeG6v24gdHLDumMgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1719037006419!5m2!1svi!2s" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

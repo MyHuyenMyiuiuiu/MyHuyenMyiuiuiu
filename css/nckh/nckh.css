@@ -1,0 +1,106 @@
+
+/* Định dạng cho thẻ main */
+main {
+    padding: 0;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* Định dạng cho các phần tử chứa nội dung */
+.back, .back1 {
+    width: 100%;
+    height: 440px;
+}
+
+.back {
+    background-color: #fff;
+}
+
+.back1 {
+    background-color: rgba(214, 235, 248, 0.445);
+}
+
+.thongbao, .congnghethongtin {
+    display: flex;
+    justify-content: space-between; /* Căn các phần tử con sang hai bên của khung */
+    align-items: flex-start; /* Căn các phần tử con theo trục dọc, bắt đầu từ đầu */
+    padding: 10px; /* Đặt khoảng cách bên trong khung chứa */
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.anh_thongbao, .anh_cntt {
+    flex: 1;
+    margin: 13px;
+    position: relative; /* Đảm bảo hình ảnh nằm trong vùng chứa của nó */
+    overflow: hidden; /* Đảm bảo hình ảnh không tràn ra ngoài vùng chứa */
+    border-radius: 10px;
+}
+
+.noidung, .noidung1 {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.anh_thongbao img, 
+.anh_cntt img, 
+.anh_cndpt img, 
+.anh_tinhocungdung img, 
+.anh_khoahoccongnghe img {
+    width: 100%; /* Đảm bảo hình ảnh bao phủ toàn bộ vùng chứa */
+    height: auto;
+    transition: transform 0.4s ease-in-out; /* Hiệu ứng chuyển tiếp mượt mà */
+}
+
+.zoom:hover {
+    transform: scale(1.1); /* Phóng to hình ảnh lên 1,1 lần kích thước ban đầu */
+    cursor: pointer;
+}
+
+/* Định dạng cho các tiêu đề */
+.noidung h2, .noidung1 h2 { 
+    color: #004080;
+    font-size: 28px;
+}
+
+.noidung h2:hover, .noidung1 h2:hover { 
+    text-decoration: underline;
+    color: #025ba1;
+}
+
+/* Định dạng cho các danh sách */
+.noidung ul, .noidung1 ul {
+    list-style-type: none;
+    padding: 0;
+    list-style-type: disc; /* Dấu chấm trước mỗi mục */
+    padding-left: 40px; /* Khoảng cách giữa dấu chấm và viền trái */
+    margin-bottom: 30px;
+}
+
+.noidung ul li, .noidung1 ul li {
+    margin-bottom: 10px;
+    color: #004080;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Định dạng cho các nút bấm */
+.button {
+    padding: 10px 20px;
+    color: #004080; /* Chữ xanh */
+    font-weight: bold;
+    border: 2px solid #004080; /* Viền xanh */
+    border-radius: 10px; /* Bo góc nút */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.button:hover {
+    background-color: #025ba1; /* Nền xanh khi ấn vào */
+    color: white; /* Chữ trắng khi ấn vào */
+}

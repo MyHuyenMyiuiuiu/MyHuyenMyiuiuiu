@@ -1,0 +1,119 @@
+
+.content-top{
+    padding: 0;
+    align-items: center; /* Căn giữa nội dung */
+    margin-bottom: 20px; /* Khoảng cách giữa nội dung và phần dưới */
+}
+
+.anhbia{
+    display: flex;
+    margin-bottom: 20px; /* Khoảng cách từ ảnh bìa đến phần nội dung */
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.anhbia:hover {
+    transform: scale(1.02); /* Phóng to ảnh khi hover */
+}
+
+.content-top p {
+    text-align: justify;
+    font-family: "Source Sans Pro", sans-serif;  
+    line-height: 24px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.content-top h3{
+    text-align: center;
+    line-height: 24px;
+    color: #025ba1;
+}
+
+/*Video và chứng nhận*/
+
+.content-bottom {
+    display: flex;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.video,
+.chungnhan {
+    flex: 1;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video iframe,
+.anhchungnhan {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.video iframe {
+    height: 100%; /* Đặt chiều cao của iframe là 100% để lấp đầy phần bên trong .video */
+    aspect-ratio: 16/9; /* Đảm bảo tỷ lệ khung hình 16:9 cho video */
+    object-fit: cover; /* Chỉnh sửa để video bao phủ toàn bộ khu vực hiển thị */
+}
+
+.video iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.anhchungnhan:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+
+figcaption{
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Modal (background) */
+.modal {
+    display: none; /* Ẩn modal mặc định */
+    position: fixed;
+    z-index: 1001; /* Đảm bảo modal luôn trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.452); /* Black w/ opacity */
+    background-color: #6062668a(112, 112, 112, 0.541); /* Black w/ opacity */
+}
+
+/* Modal content (image) */
+.modal-content {
+    margin: 50px auto 50px auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

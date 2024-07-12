@@ -1,0 +1,657 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    transition: opacity 0.3s ease;
+}
+
+.header {
+    background-color: white;
+    padding: 10px 0;
+    position: relative; /* Để đảm bảo sticky header hiển thị trên header chính */
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    background-color: white; 
+    padding: 5px 5px 15px 5px;
+}
+
+.ảnh {
+    width: 90px;
+    height: 90px; 
+    margin-right: 20px;
+}
+
+.title {
+    white-space: nowrap; 
+}
+
+.line1, .line2 {
+    display: block;
+    color: #025ba1; 
+    font-size: 20px; 
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.line2 {
+    font-size: 16px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 5px 5px 15px 5px;
+}
+
+
+.hotline {
+    font-size: 18px;
+    color: #025ba1;
+    font-weight: bold;
+}
+
+.email {
+    font-size: 18px;
+    color: #025ba1;
+    font-weight: bold; 
+}
+
+.hotline img {
+    width: 33px; 
+    height: auto; 
+    vertical-align: middle;
+}
+.email img {
+    width: 33px; 
+    height: auto; 
+    vertical-align: middle; 
+}
+.facebook img {
+    width: 33px; 
+    height: auto; 
+    vertical-align: middle; 
+}
+.youtube img {
+    width: 41px; 
+    height: auto; 
+    vertical-align: middle; 
+}
+.search img {
+    width: 38px; 
+    height: auto; 
+    vertical-align: middle; 
+}
+
+.navbar .email {
+    margin-left: 20px; 
+    margin-right: 20px;
+}
+.navbar .youtube {
+    margin-left: 20px; 
+    margin-right: 20px;
+}
+
+.search-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #025ba1;
+    padding: 10px 0;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    z-index: 1000;
+}
+.search-bar-container.active {
+    transform: translateY(0);
+}
+.search-bar {
+    width: 70%;  /* Adjusted to make space for the button */
+    padding: 10px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+.search-button {
+    padding: 10px;
+    border: none;
+    background-color: #004080;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+.search-button:hover {
+    background-color: #003366; 
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    transition: padding-top 0.5s ease;
+}
+.container.search-active {
+    padding-top: 60px; /* Adjust this value based on the height of your search bar container */
+}
+
+.tieude {
+    display: flex;
+    width: 100%;
+    background-color:#025ba1;
+    flex: 100%;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tieude a {
+    color: white;
+    padding: 14px 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tieude a:hover {
+    background-color:#fff;
+    color: #025ba1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tieude #selected {
+    background-color:#fff;
+    color: #025ba1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #025ba1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 150px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    white-space: nowrap;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #fff;
+    color: #025ba1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #025ba1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 150px;
+}
+
+.sub-dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sub-dropdown-content a:hover {
+    background-color: #fff;
+    color: #025ba1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+.header{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    background-color: #025ba1;
+    color: white;
+    padding: 20px 0;
+}
+
+.chantrangweb {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.textwidget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.textwidget ul li {
+    padding: 5px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 15px;
+}
+
+.textwidget ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.map-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 150px;
+    border: 0;
+}
+
+.special-link {
+    color: white; 
+    text-decoration: none; 
+}
+.special-link:hover {
+    color: white; 
+    text-decoration: none; 
+}
+
+/*Cuộn header*/
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1000; /* Để hiển thị trên các thành phần khác */
+    pointer-events: none; /* Để tránh tương tác khi header ẩn */
+}
+
+.sticky-header.show {
+    opacity: 1;
+    pointer-events: auto; /* Để cho phép tương tác khi header hiện */
+}
+
+
+/* CSS cho .container1 */
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(214, 235, 248, 0.445);
+}
+
+.item {
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 480px;
+}
+
+.item img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5; 
+    text-align: justify;
+}
+
+.item h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    color: #025ba1;
+    padding: 5px 20px;
+    justify-content: center;
+}
+.item h2 a:link{
+    color: #025ba1;
+    text-decoration: none;
+}
+
+.item h2 a:hover{
+    color: #025ba1;
+    text-decoration: underline;
+}
+.item h2 a:visited {
+    color: #025ba1;
+    text-decoration: none;
+}
+
+.news-container {
+    width: 100%;
+    max-height: 360px;
+    overflow: hidden;
+    position: relative;
+}
+
+.news-wrapper {
+    display: block; /* Thay vì flex */
+    overflow-y: auto; /* Sử dụng overflow-y để cho phép cuộn dọc */
+    flex-direction: column;
+    animation: scrollNews 20s linear infinite;
+    overflow: hidden; /* Đảm bảo nội dung cuộn không vượt quá vùng chứa */
+}
+
+.news-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.news-item img {
+    width: 160px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.news-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item .news-date {
+    font-size: 14px; /* Điều chỉnh kích thước ngày tháng */
+    color: #888; /* Màu sắc ngày tháng */
+    margin: 3px 0 0 0; /* Khoảng cách giữa tiêu đề và ngày tháng, giảm giá trị margin-top */
+}
+
+.news-item .news-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+    margin: 0;
+}
+.news-item .news-title a:link {
+    color: #000;
+    text-decoration: none;
+}
+.news-item .news-title a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.news-item .news-title a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.news-item.spacer {
+    height: 360px; /* Adjust this value to be the same as the max-height of the news container */
+}
+
+@keyframes scrollNews {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+/* Popup Form Styles */
+.popup-form {
+    display: none; /* Mặc định ẩn popup */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ trong suốt */
+    z-index: 1000; /* Đảm bảo popup hiển thị trên cùng */
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white; /* Màu nền của nội dung popup */
+    margin: auto; /* Canh giữa popup theo chiều dọc và ngang */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Chiều rộng của popup */
+    max-width: 450px; /* Giới hạn chiều rộng tối đa */
+    position: relative;
+    top: 50%; /* Canh giữa theo chiều dọc */
+    transform: translateY(-50%); /* Dịch chuyển popup lên trên 50% chiều cao của nó */
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #025ba1; /* Màu nền của form */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+}
+
+input, select, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px; /* Tăng chiều cao của textarea */
+}
+input::placeholder,
+textarea::placeholder {
+    font-family: Arial, sans-serif; /* Đặt font cho placeholder */
+    font-size: 14px; /* Đặt kích thước chữ cho placeholder */
+    color: #888; /* Đặt màu chữ cho placeholder */
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color:#000;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #fff;
+    color:#000;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Khoảng cách giữa label và input */
+}
+
+.special-offer-btn {
+    position: fixed;
+    bottom: 10px;
+    left: 20px; /* Hoặc right: 20px; tùy theo vị trí mong muốn */
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001; /* Đảm bảo nút hiển thị trên cùng */
+}
+
+.special-offer-btn:hover {
+    background-color: #004080;
+}
+
+
+/*định dạng 3 ảnh có số liệu*/
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 50px;
+    transition: padding-top 0.5s ease;
+}
+
+.column {
+    text-align: center;
+    width: 30%;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.item-number {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.special {
+    margin: 0;
+    font-size: 4em; 
+    font-weight: bold;
+}
+
+.giaithich {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.videoclip {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+

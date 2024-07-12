@@ -1,0 +1,102 @@
+.article {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.article-header {
+    display: flex;
+    align-items: flex-start;
+}
+
+.article-header img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.article-header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-header h3 {
+    margin: 0;
+    text-decoration: none;
+}
+
+.article-header h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-header h3 a:hover {
+    color: inherit;
+}
+
+.article-header h3 a:visited {
+    color: inherit;
+}
+
+.article-meta {
+    display: flex;
+    color: #636363;
+    font-size: 0.9em;
+    margin-top: 10px; /* Thêm khoảng cách giữa h3 và meta info */
+}
+
+.article-meta .date {
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.article-meta .views {
+    margin-left: 5px;
+}
+
+/*Trang*/
+.pagination {
+    text-align: right; /* Căn giữa nút phân trang */
+    margin: 20px 0; /* Khoảng cách với phần nội dung chính */
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    font-size: 18px; /* Điều chỉnh kích thước phù hợp */
+    border-radius: 50%; /* Làm tròn góc */
+    border: 2px solid #004080;
+    background-color: white; 
+    color: #333; /* Màu sắc mặc định */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mềm mại */
+}
+
+.pagination button:hover {
+    background-color: #025ba1;
+    border-radius: 50%; /* Làm tròn góc */
+}
+
+.prev-btn {
+    margin-right: 10px; /* Khoảng cách với nút tiếp theo */
+}
+
+.next-btn {
+    margin-left: 10px; /* Khoảng cách với nút trước đó */
+}
+
+/*Xem chi tiết*/
+.article .xemchitiet p{
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.article .xemchitiet a:link,
+.article .xemchitiet a:visited,
+.article .xemchitiet a:hover,
+.article .xemchitiet a:active {
+    color: black; /* Đảm bảo màu sắc liên kết không thay đổi */
+    text-decoration: none; /* Loại bỏ gạch chân */
+}
+

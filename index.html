@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="Trang chủ Website Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội, Công nghệ thông tin, Công nghệ đa phương tiện">
+    <meta name="description" content="Trang chủ Website Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội">
+    <meta name="Author" content="Nhóm 3">
+    <meta name="copyright" content="Nhóm 3">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
+    <title>Trang chủ - Khoa Công Nghệ Thông Tin - Đại Học Kiến Trúc Hà Nội</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">  
+    <link rel="stylesheet" type="text/css" href="./css/tintuc/style scroll_to_top.css">
+    <script src="./js/main.js"></script>  
+    <script src="./js/tintuc/maincmt.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/slideanh.css"> 
+    <style>
+        @media only screen and (max-width: 428px) {
+    .header, .navbar, .tieude, .container, .container1, .container2, .chantrangweb {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .header .logo {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .navbar .email, .navbar .youtube {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container1 .item, .container2 .column {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .news-container {
+        max-height: 200px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Additional responsive styles */
+@media only screen and (max-width: 768px) {
+    .header, .navbar, .tieude, .container, .container1, .container2, .chantrangweb {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .header .logo {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .navbar .email, .navbar .youtube {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container1 .item, .container2 .column {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .news-container {
+        max-height: 200px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header" id="main-header">
+        <div id="search-bar-container" class="search-bar-container">
+            <input type="text" id="search-bar" class="search-bar" placeholder="Nhập từ khóa tìm kiếm...">
+            <button onclick="search()" class="search-button">Tìm kiếm</button>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo" class="ảnh">
+                <div class="title">
+                    <span class="line1">KHOA CÔNG NGHỆ THÔNG TIN</span><br>
+                    <span class="line2">ĐẠI HỌC KIẾN TRÚC HÀ NỘI</span>
+                </div>
+            </div>          
+            
+            <nav class="navbar">
+                <div class="hotline">
+                    <a href="#" id="hotline-link" onclick="showHotline()"><img src="./img/Hotline.png" alt="Hotline" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="hotline-number" style="display: none;" onclick="showHotline()">024.3854.2391</span>
+                </div>
+                <div class="email">
+                    <a href="#" id="email-link" onclick="showEmail()"><img src="./img/Email.png" alt="Email" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="email-text" style="display: none;" onclick="showEmail()">khoacntt@hau.edu.vn</span>
+                </div>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/cntt.dhkt" target="_blank"><img src="./img/Facebook.png" alt="Facebook" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="youtube">
+                    <a href="https://www.youtube.com/channel/UC1LQLaQng8hdIqcUhWKFbnw" target="_blank"><img src="./img/YouTube.png" alt="YouTube" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="search">
+                    <a href="#" id="search-link" onclick="showSearchBar()"><img src="./img/Search.png" alt="Search" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+            </nav>
+        </div>
+
+
+    <nav class="tieude">
+        <a href="./index.html" id="selected">TRANG CHỦ</a>
+         
+        <div class="dropdown">
+            <a href="./gioithieu/gioithieu.html">GIỚI THIỆU</a>
+            <div class="dropdown-content">
+                <a href="./gioithieu/gioithieukhoacntthau.html">GIỚI THIỆU KHOA CNTT HAU</a>
+                <a href="./gioithieu/tamnhin_nhiemvu.html">TẦM NHÌN - NHIỆM VỤ</a>
+                <a href="./gioithieu/doingugiangvien.html">ĐỘI NGŨ GIẢNG VIÊN</a>
+                <a href="./gioithieu/albumanh.html">THƯ VIỆN ẢNH</a>
+                <a href="./gioithieu/thuvienclip.html">THƯ VIỆN CLIP</a>
+                <a href="./gioithieu/doanthanhnien.html">ĐOÀN THANH NIÊN</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="./tintuc/tintuc.html">TIN TỨC</a>
+            <div class="dropdown-content">
+                <a href="./tintuc/thongbao.html">THÔNG BÁO</a>
+                <a href="./tintuc/cntt.html">CÔNG NGHỆ THÔNG TIN</a>
+                <a href="./tintuc/congnghedaphuongtien.html">CÔNG NGHỆ ĐA PHƯƠNG TIỆN</a>
+                <a href="./tintuc/tinhocungdung.html">TIN HỌC ỨNG DỤNG</a>
+                <a href="./tintuc/khoahoccongnghe.html">KHOA HỌC CÔNG NGHỆ</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="./daotao/daotao.html">ĐÀO TẠO</a>
+            <div class="dropdown-content">
+                <a href="./daotao/nam2022.html">NĂM 2022</a>
+                <a href="./daotao/nam2021.html">NĂM 2021</a>
+                <a href="./daotao/nam2020.html">NĂM 2020</a>
+                <a href="./daotao/nam2016.html">NĂM 2016</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="./sinhvien/sinhvien.html">SINH VIÊN</a>
+            <div class="dropdown-content">
+                <div class="sub-dropdown">
+                    <a href="./sinhvien/sinhvien.html">SINH VIÊN CHUẨN BỊ TỐT NGHIỆP</a>
+                    <div class="sub-dropdown-content">
+                        <a href="./sinhvien/thongbao.html">THÔNG BÁO</a>
+                        <a href="./sinhvien/vanbanhuongdan.html">VĂN BẢN HƯỚNG DẪN</a>
+                        <a href="./sinhvien/tailieuthamkhao.html">TÀI LIỆU THAM KHẢO</a>
+                        <a href="./sinhvien/tuyendung.html">TUYỂN DỤNG</a>
+                    </div>
+                </div>
+                <a href="./sinhvien/cuusinhvien.html">CỰU SINH VIÊN</a>
+            </div>
+        </div>
+        
+
+        <div class="dropdown">
+            <a href ="./nckh/nghiencuukhoahoc.html">NGHIÊN CỨU KHOA HỌC</a>
+            <div class="dropdown-content">
+                <a href="./nckh/hoatdongnckhsinhvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC SINH VIÊN</a>
+                <a href="./nckh/hoatdongnckhgiangvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC GIẢNG VIÊN</a>
+            </div>
+        </div>
+
+        <a href="./tuyensinh/tuyensinh.html">TUYỂN SINH</a> 
+        <div class="dropdown">
+            <a href="./thuvienso/thuvienso.html">THƯ VIỆN SỐ</a>
+            <div class="dropdown-content">
+                <a href="./thuvienso/thuvienso.html">GIỚI THIỆU</a>
+                <a href="./thuvienso/congnghe.html">ĐỀ CƯƠNG CNTT</a>
+                <a href="./thuvienso/cndaphuongtien.html">ĐỀ CƯƠNG CNĐPT</a>
+                <a href="./thuvienso/giaotrinh.html">GIÁO TRÌNH</a>
+                <a href="http://www.thuviendhkt.net/" target="_blank">THƯ VIỆN SỐ HAU</a>
+            </div>
+        </div>
+
+    </nav>
+    </header>
+
+    <header class="header sticky-header" id="sticky-header">
+        <div id="search-bar-container" class="search-bar-container">
+            <input type="text" id="search-bar" class="search-bar" placeholder="Nhập từ khóa tìm kiếm...">
+            <button onclick="search()" class="search-button">Tìm kiếm</button>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo" class="ảnh">
+                <div class="title">
+                    <span class="line1">KHOA CÔNG NGHỆ THÔNG TIN</span><br>
+                    <span class="line2">ĐẠI HỌC KIẾN TRÚC HÀ NỘI</span>
+                </div>
+            </div>          
+            
+            <nav class="navbar">
+                <div class="hotline">
+                    <a href="#" id="hotline-link" onclick="showHotline()"><img src="./img/Hotline.png" alt="Hotline" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="hotline-number" style="display: none;" onclick="showHotline()">024.3854.2391</span>
+                </div>
+                <div class="email">
+                    <a href="#" id="email-link" onclick="showEmail()"><img src="./img/Email.png" alt="Email" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                    <span id="email-text" style="display: none;" onclick="showEmail()">khoacntt@hau.edu.vn</span>
+                </div>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/cntt.dhkt" target="_blank"><img src="./img/Facebook.png" alt="Facebook" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="youtube">
+                    <a href="https://www.youtube.com/channel/UC1LQLaQng8hdIqcUhWKFbnw" target="_blank"><img src="./img/YouTube.png" alt="YouTube" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+                <div class="search">
+                    <a href="#" id="search-link" onclick="showSearchBar()"><img src="./img/Search.png" alt="Search" onmouseover="hoverEffect(this)" onmouseout="normalEffect(this)"></a>
+                </div>
+            </nav>
+        </div>
+
+
+    <nav class="tieude">
+        <a href="./index.html" id="selected">TRANG CHỦ</a>
+         
+        <div class="dropdown">
+            <a href="./gioithieu/gioithieu.html">GIỚI THIỆU</a>
+            <div class="dropdown-content">
+                <a href="./gioithieu/gioithieukhoacntthau.html">GIỚI THIỆU KHOA CNTT HAU</a>
+                <a href="./gioithieu/tamnhin_nhiemvu.html">TẦM NHÌN - NHIỆM VỤ</a>
+                <a href="./gioithieu/doingugiangvien.html">ĐỘI NGŨ GIẢNG VIÊN</a>
+                <a href="./gioithieu/albumanh.html">THƯ VIỆN ẢNH</a>
+                <a href="./gioithieu/thuvienclip.html">THƯ VIỆN CLIP</a>
+                <a href="./gioithieu/doanthanhnien.html">ĐOÀN THANH NIÊN</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="./tintuc/tintuc.html">TIN TỨC</a>
+            <div class="dropdown-content">
+                <a href="./tintuc/thongbao.html">THÔNG BÁO</a>
+                <a href="./tintuc/cntt.html">CÔNG NGHỆ THÔNG TIN</a>
+                <a href="./tintuc/congnghedaphuongtien.html">CÔNG NGHỆ ĐA PHƯƠNG TIỆN</a>
+                <a href="./tintuc/tinhocungdung.html">TIN HỌC ỨNG DỤNG</a>
+                <a href="./tintuc/khoahoccongnghe.html">KHOA HỌC CÔNG NGHỆ</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="./daotao/daotao.html">ĐÀO TẠO</a>
+            <div class="dropdown-content">
+                <a href="./daotao/nam2022.html">NĂM 2022</a>
+                <a href="./daotao/nam2021.html">NĂM 2021</a>
+                <a href="./daotao/nam2020.html">NĂM 2020</a>
+                <a href="./daotao/nam2016.html">NĂM 2016</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="./sinhvien/sinhvien.html">SINH VIÊN</a>
+            <div class="dropdown-content">
+                <div class="sub-dropdown">
+                    <a href="./sinhvien/sinhvienchuanbitotnghiep.html">SINH VIÊN CHUẨN BỊ TỐT NGHIỆP</a>
+                    <div class="sub-dropdown-content">
+                        <a href="./sinhvien/sinhvienchuanbitotnghiep/vanbanhuongdan.html">VĂN BẢN HƯỚNG DẪN</a>
+                        <a href="./sinhvien/sinhvienchuanbitotnghiep/tailieuthamkhao.html">TÀI LIỆU THAM KHẢO</a>
+                        <a href="./sinhvien/sinhvienchuanbitotnghiep/tuyendung.html">TUYỂN DỤNG</a>
+                    </div>
+                </div>
+                <a href="./sinhvien/cuusinhvien.html">CỰU SINH VIÊN</a>
+            </div>
+        </div>
+        
+
+        <div class="dropdown">
+            <a href ="./nckh/nghiencuukhoahoc.html">NGHIÊN CỨU KHOA HỌC</a>
+            <div class="dropdown-content">
+                <a href="./nckh/hoatdongnckhsinhvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC SINH VIÊN</a>
+                <a href="./nckh/hoatdongnckhgiangvien.html">HOẠT ĐỘNG NGHIÊN CỨU KHOA HỌC GIẢNG VIÊN</a>
+            </div>
+        </div>
+
+        <a href="./tuyensinh/tuyensinh.html">TUYỂN SINH</a> 
+        <div class="dropdown">
+            <a href="./thuvienso/thuvienso.html">THƯ VIỆN SỐ</a>
+            <div class="dropdown-content">
+                <a href="./thuvienso/thuvienso.html">GIỚI THIỆU</a>
+                <a href="./thuvienso/congnghe.html">ĐỀ CƯƠNG CNTT</a>
+                <a href="./thuvienso/cndaphuongtien.html">ĐỀ CƯƠNG CNĐPT</a>
+                <a href="./thuvienso/giaotrinh.html">GIÁO TRÌNH</a>
+                <a href="http://www.thuviendhkt.net/" target="_blank">THƯ VIỆN SỐ HAU</a>
+            </div>
+        </div>
+
+    </nav>
+    </header>
+
+    
+    <div class="container5">
+        <div class="slideshow-container">
+            <div class="slideshow">
+                <div class="slide active">
+                    <a href="./tintuc/thongbao/ve_le_trao_bang_tot_nghiep.html"><img src="./img/LETRAOBANG.png" alt="Back" class="slideanh"></a>
+                    <div class="overlay">
+                        <div class="text">
+                            <h2>
+                                Lễ trao bằng tốt nghiệp cho sinh viên khóa 2018 - 2023 khoa Công nghệ thông tin</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="./tuyensinh/tuyensinh.html"><img src="./img/anh_sukien.png" alt="Back" class="slideanh"></a>
+                </div>
+                <div class="slide">
+                    <a href="./tintuc/thongbao/ve_chuyen_doi_so_2024.html"><img src="./img/CHUYỂN ĐỔI SỐ.png" alt="Back" class="slideanh"></a>
+                    <div class="overlay">
+                        <div class="text">
+                            <h2>Hội thảo “Chuyển đổi số trong giáo dục và đào tạo” năm 2024</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <a href="./gioithieu/Đoàn thanh niên/ngay_thanh_lap_Doan.html"><img src="./img/MEETING.png" alt="Back" class="slideanh"></a>
+                    <div class="overlay">
+                        <div class="text">
+                            <h2>
+                                Chào mừng kỷ niệm 93 năm ngày thành lập Đoàn TNCS Hồ Chí Minh</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/slide.js"></script>
+
+    <div class="container1">
+        <div class="item">
+            <h2 style="text-align: left;"><a href="./tuyensinh/gioithieucntt.html">CÔNG NGHỆ THÔNG TIN</a></h2>
+            <img src="./img/congnghett.png" alt="Công nghệ thông tin">
+            <p><b><em>Chào mừng bạn đến với chuyên ngành Công nghệ thông tin - ngành học đầy tiềm năng và hứa hẹn trong thời đại công nghệ số!</em></b></p>
+        </div>
+        <div class="item">
+            <h2 style="text-align: left;"><a href="./tuyensinh/gioithieucndpt.html">CÔNG NGHỆ ĐA PHƯƠNG TIỆN</a></h2>
+            <img src="./img/cndaphuongtien.png" alt="Công nghệ đa phương tiện">
+            <p><b><em>Chào mừng bạn đến với chuyên ngành Công nghệ đa phương tiện - ngành học kết hợp giữa nghệ thuật và kỹ thuật, mang đến cho bạn cơ hội sáng tạo không giới hạn!</em></b></p>
+        </div>
+    
+        <div class="item">
+            <h2>BÀI VIẾT MỚI CẬP NHẬT</h2>
+            <div class="news-container">
+                <div class="news-wrapper">
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_chuyen_doi_so_2024.html"><img src="./img/anhbia_chuyendoiso.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/thongbao/ve_chuyen_doi_so_2024.html">Hội thảo “Chuyển đổi số trong giáo dục và đào tạo” năm 2024</a></h3>
+                            <p class="news-date">13/06/2024</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./sinhvien/tailieuthamkhao1.html"><img src="./img/sinhvien/anhdoan.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./sinhvien/tailieuthamkhao1.html">Đồ án tốt nghiệp của sinh viên khoa CNTT với chuyển đổi số</a></h3>
+                            <p class="news-date">14/05/2024</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html"><img src="./img/ve_ketqua.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html">Kết quả kỳ thi Olympic Tin học Sinh viên Việt Nam lần thứ 32</a></h3>
+                            <p class="news-date">11/12/2023</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_le_trao_bang_tot_nghiep.html"><img src="./img/anhbia_bangtotnghiep.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html">Lễ trao bằng tốt nghiệp cho sinh viên khóa 2018 - 2023 khoa Công nghệ thông tin</a></h3>
+                            <p class="news-date">23/07/2023</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_ky_thi_lap_trinh_svqt_ICPC.html"><img src="./img/vekythilaptrinhsvqtICPC.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/thongbao/ve_ky_thi_lap_trinh_svqt_ICPC.html">Thông báo về kỳ thi lập trình sinh viên quốc tế ICPC</a></h3>
+                            <p class="news-date">08-06-2023</p>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_chuyen_doi_so_2024.html"><img src="./img/anhbia_chuyendoiso.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/thongbao/ve_chuyen_doi_so_2024.html">Hội thảo “Chuyển đổi số trong giáo dục và đào tạo” năm 2024</a></h3>
+                            <p class="news-date">13/06/2024</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./sinhvien/tailieuthamkhao1.html"><img src="./img/sinhvien/anhdoan.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./sinhvien/tailieuthamkhao1.html">Đồ án tốt nghiệp của sinh viên khoa CNTT với chuyển đổi số</a></h3>
+                            <p class="news-date">14/05/2024</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html"><img src="./img/ve_ketqua.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html">Kết quả kỳ thi Olympic Tin học Sinh viên Việt Nam lần thứ 32</a></h3>
+                            <p class="news-date">11/12/2023</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_le_trao_bang_tot_nghiep.html"><img src="./img/anhbia_bangtotnghiep.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html">Lễ trao bằng tốt nghiệp cho sinh viên khóa 2018 - 2023 khoa Công nghệ thông tin</a></h3>
+                            <p class="news-date">23/07/2023</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_ky_thi_lap_trinh_svqt_ICPC.html"><img src="./img/vekythilaptrinhsvqtICPC.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/thongbao/ve_ky_thi_lap_trinh_svqt_ICPC.html">Thông báo về kỳ thi lập trình sinh viên quốc tế ICPC</a></h3>
+                            <p class="news-date">08-06-2023</p>
+                        </div>
+                    </div>
+
+
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_chuyen_doi_so_2024.html"><img src="./img/anhbia_chuyendoiso.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/thongbao/ve_chuyen_doi_so_2024.html">Hội thảo “Chuyển đổi số trong giáo dục và đào tạo” năm 2024</a></h3>
+                            <p class="news-date">13/06/2024</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./sinhvien/tailieuthamkhao1.html"><img src="./img/sinhvien/anhdoan.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./sinhvien/tailieuthamkhao1.html">Đồ án tốt nghiệp của sinh viên khoa CNTT với chuyển đổi số</a></h3>
+                            <p class="news-date">14/05/2024</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html"><img src="./img/ve_ketqua.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html">Kết quả kỳ thi Olympic Tin học Sinh viên Việt Nam lần thứ 32</a></h3>
+                            <p class="news-date">11/12/2023</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_le_trao_bang_tot_nghiep.html"><img src="./img/anhbia_bangtotnghiep.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/cntt/ve_ket_qua_tin_hoc_sinh_vien.html">Lễ trao bằng tốt nghiệp cho sinh viên khóa 2018 - 2023 khoa Công nghệ thông tin</a></h3>
+                            <p class="news-date">23/07/2023</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <a href="./tintuc/thongbao/ve_ky_thi_lap_trinh_svqt_ICPC.html"><img src="./img/vekythilaptrinhsvqtICPC.png" alt="News 1"></a>    
+                        <div class="news-text">
+                            <h3 class="news-title"><a href="./tintuc/thongbao/ve_ky_thi_lap_trinh_svqt_ICPC.html">Thông báo về kỳ thi lập trình sinh viên quốc tế ICPC</a></h3>
+                            <p class="news-date">08-06-2023</p>
+                        </div>
+                    </div>
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="column">
+            <img src="./img/anh_soluongsinhvien.png" alt="Image 1">
+            <div class="item-number" data-count="2000">2000</div>
+            <p class="giaithich">Sinh viên theo học</p>
+        </div>
+        <div class="column">
+            <img src="./img/anh_songanhdaotao.png" alt="Image 2">
+            <p class="special">2</p>
+            <p class="giaithich">Ngành đào tạo</p>
+        </div>
+        <div class="column">
+            <img src="./img/anh_tylecovieclam.png" alt="Image 3">
+            <div class="item-number" data-target="98">98</div>
+            <p class="giaithich">% Sinh viên có việc làm</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>   
+    <!-- thêm thư viện jQuery -->
+    <script>
+    $('.item-number').each(function () {
+        $(this).prop('item-number', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 7000,  // Thời gian chạy hiệu ứng (ms)
+            easing: 'swing', // Phương thức điều chỉnh tốc độ (có thể sử dụng các giá trị như 'linear', 'easeOutBounce', ...)
+            step: function (now) {
+                $(this).text(Math.ceil(now)); // Cập nhật số lên giao diện, làm tròn số
+            }
+        });
+    });
+    </script>
+
+
+<div class="container1">
+    <div class="item">
+        <h2 style="text-align: left;"><a href="./gioithieu/albumanh.html">THƯ VIỆN ẢNH</a></h2>
+        <img src="./img/thuvienanh.png" alt="Thư viện ảnh">
+        <p><b><i>Lưu giữ ký ức - Trân trọng hiện tại - Hướng đến tương lai</i></b></p>
+    </div>
+    <div class="item">
+        <h2 style="text-align: left;"><a href="./gioithieu/thuvienclip.html">THƯ VIỆN CLIP</a></h2>
+        <video controls class="videoclip" autoplay loop muted>
+            <source src="./img/thuvienclip.mp4" type="video/mp4">
+        </video>
+        <p><b><i>Mỗi clip là một câu chuyện, mỗi câu chuyện là một hành trình. Thư viện clip - Nơi lưu giữ những hành trình cảm xúc.</i></b></p>
+    </div>
+
+    <div class="item">
+        <h2>ĐOÀN THANH NIÊN</h2>
+        <div class="news-container">
+            <div class="news-wrapper">
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/mo_link_dang_ky_ATC.html"><img src="./img/ATC.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/mo_link_dang_ky_ATC.html">ATC - Algorithmic Thinking Challenge 2024 - Chính thức mở link đăng ký</a></h3>
+                        <p class="news-date">19/05/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/ngay_thanh_lap_Doan.html"><img src="./img/93namDoan.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/ngay_thanh_lap_Doan.html">Chào mừng kỷ niệm 93 năm ngày thành lập Đoàn TNCS Hồ Chí Minh (26/3/1931-26/3/2024)</a></h3>
+                        <p class="news-date">26/03/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/chinh_thuc_khoi_dong_MOS.html"><img src="./img/MOS 2024.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/chinh_thuc_khoi_dong_MOS.html">MOS - Microsoft Office Specialist 2024 - Chính thức khởi động</a></h3>
+                        <p class="news-date">23/03/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/giai_bong_da_IT_LEAGUE S4.html"><img src="./img/IT-LEAGUE S4.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/giai_bong_da_IT_LEAGUE S4.html">Giải bóng đá sinh viên khoa CNTT "IT - LEAGUE S4" - Chính thức khởi động</a></h3>
+                        <p class="news-date">26/03/2024</p>
+                    </div>
+                </div>
+
+
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/mo_link_dang_ky_ATC.html"><img src="./img/ATC.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/mo_link_dang_ky_ATC.html">ATC - Algorithmic Thinking Challenge 2024 - Chính thức mở link đăng ký</a></h3>
+                        <p class="news-date">19/05/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/ngay_thanh_lap_Doan.html"><img src="./img/93namDoan.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/ngay_thanh_lap_Doan.html">Chào mừng kỷ niệm 93 năm ngày thành lập Đoàn TNCS Hồ Chí Minh (26/3/1931-26/3/2024)</a></h3>
+                        <p class="news-date">26/03/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/chinh_thuc_khoi_dong_MOS.html"><img src="./img/MOS 2024.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/chinh_thuc_khoi_dong_MOS.html">MOS - Microsoft Office Specialist 2024 - Chính thức khởi động</a></h3>
+                        <p class="news-date">23/03/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/giai_bong_da_IT_LEAGUE S4.html"><img src="./img/IT-LEAGUE S4.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/giai_bong_da_IT_LEAGUE S4.html">Giải bóng đá sinh viên khoa CNTT "IT - LEAGUE S4" - Chính thức khởi động</a></h3>
+                        <p class="news-date">26/03/2024</p>
+                    </div>
+                </div>
+
+
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/mo_link_dang_ky_ATC.html"><img src="./img/ATC.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/mo_link_dang_ky_ATC.html">ATC - Algorithmic Thinking Challenge 2024 - Chính thức mở link đăng ký</a></h3>
+                        <p class="news-date">19/05/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/ngay_thanh_lap_Doan.html"><img src="./img/93namDoan.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/ngay_thanh_lap_Doan.html">Chào mừng kỷ niệm 93 năm ngày thành lập Đoàn TNCS Hồ Chí Minh (26/3/1931-26/3/2024)</a></h3>
+                        <p class="news-date">26/03/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/chinh_thuc_khoi_dong_MOS.html"><img src="./img/MOS 2024.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/chinh_thuc_khoi_dong_MOS.html">MOS - Microsoft Office Specialist 2024 - Chính thức khởi động</a></h3>
+                        <p class="news-date">23/03/2024</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <a href="./gioithieu/Đoàn thanh niên/giai_bong_da_IT_LEAGUE S4.html"><img src="./img/IT-LEAGUE S4.png" alt="News 1"></a>    
+                    <div class="news-text">
+                        <h3 class="news-title"><a href="./gioithieu/Đoàn thanh niên/giai_bong_da_IT_LEAGUE S4.html">Giải bóng đá sinh viên khoa CNTT "IT - LEAGUE S4" - Chính thức khởi động</a></h3>
+                        <p class="news-date">26/03/2024</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    <div id="popupForm" class="popup-form">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Để lại thông tin của bạn</h2>
+            <form id="contactForm" action="process_form.php" method="POST" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Họ và tên<span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Điện thoại<span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+                <div class="form-group">
+                    <label for="program">Loại câu hỏi<span class="required">*</span></label>
+                    <select id="program" name="program" required>
+                        <option value="">Loại câu hỏi </option>
+                        <option value="option1">Về chương trình đào tạo</option>
+                        <option value="option2">Về đăng ký tín chỉ và thời gian học</option>
+                        <option value="option3">Về tốt nghiệp và văn bằng</option>
+                        <option value="option4">Về học bổng và miễn giảm học phí</option>
+                        <option value="option5">Về quy chế và hình thức tuyển sinh</option>
+                        <option value="option6">Về công tác sinh viên</option>
+                    </select>
+                </div>    
+                <div class="form-group">
+                    <label for="question">Nội dung câu hỏi<span class="required">*</span></label>
+                    <textarea id="question" name="question" placeholder="Nhập câu hỏi của bạn" required></textarea>
+                </div>
+                <button type="submit">Gửi thông tin</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <button id="specialOfferBtn" class="special-offer-btn" onclick="openPopup()">HỖ TRỢ GIẢI ĐÁP</button>
+    
+    <button id="scroll-to-top" title="Go to top">↑</button>
+
+    <footer>
+        <div class="chantrangweb">
+            <div class="footer-column">
+                <h3>LIÊN KẾT</h3>
+                <div class="textwidget">
+                    <ul>
+                        <li><a href="https://hau.edu.vn/" target="_blank" class="special-link">Đại học Kiến trúc</a></li>
+                        <li><a href="https://moet.gov.vn/Pages/home.aspx" target="_blank" class="special-link">Bộ Giáo dục và Đào tạo</a></li>
+                        <li><a href="https://moc.gov.vn/vn/Pages/Trangchu.aspx" target="_blank" class="special-link">Bộ xây dựng</a></li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>LIÊN HỆ</h3>
+                <div class="textwidget">
+                    <ul>
+                        <li>Địa chỉ: Tầng 7 Nhà I, Đại học Kiến trúc, P. Văn Quán, Hà Đông, Hà Nội</li>
+                        <li>Điện thoại: 024.3854.2391</li>
+                        <li>Email: khoacntt@hau.edu.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>BẢN ĐỒ</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14901.20506835429!2d105.7891549!3d20.9805574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ade83ba9e115%3A0x6f4fdb5e1e9e39ed!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBLaeG6v24gdHLDumMgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1719037006419!5m2!1svi!2s" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
